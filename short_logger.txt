@@ -1,0 +1,65 @@
+[
+    {
+        "id": "17e085aa.f257ba",
+        "type": "tail",
+        "z": "22532d3a.aa9342",
+        "name": "",
+        "filetype": "text",
+        "split": false,
+        "filename": "/home/pi/.local/share/WSJT-X/ALL.TXT",
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "e003710a.56a598"
+            ]
+        ]
+    },
+    {
+        "id": "1b0c11ce.d9360e",
+        "type": "file",
+        "z": "22532d3a.aa9342",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "5a8970e8.4a00c"
+            ]
+        ]
+    },
+    {
+        "id": "5a8970e8.4a00c",
+        "type": "debug",
+        "z": "22532d3a.aa9342",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 790,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e003710a.56a598",
+        "type": "function",
+        "z": "22532d3a.aa9342",
+        "name": "Config",
+        "func": "mycall = 'KG4IXS';          // Change to your call here\nmygrid = 'FM06';            // Change to your gridsquare here\nvar d = new Date();         // Do Not Change\noutput = '/home/pi/.local/share/WSJT-X/Filtered_Output_' + mycall + '_' + (d.getUTCMonth()+1) + '_' + d.getUTCFullYear() + '.txt';\n\n// ---------------------------- Do Not Edit Below -----------------\n\nvar str = msg.payload;\nvar n = str.includes(mycall);\nvar o = str.includes(mygrid);\nvar p = str.includes('CQ');\n\nif (n && !o && !p){msg.payload = msg.payload; msg.filename = output; return msg; }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "1b0c11ce.d9360e"
+            ]
+        ]
+    }
+]
