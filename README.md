@@ -6,7 +6,7 @@ Tired of manually searching in your 'ALL.TXT' log to see if you worked a station
 Easily modifyable, simple to install!
 
 Requirements:
-- Node-Red  (https://nodered.org/) - probably already installed on your Raspberry Pi
+- Node-Red  (https://nodered.org/) - probably already installed on your Raspberry Pi ( Howto: https://nodered.org/docs/getting-started/raspberrypi )
 
 - Node-Red Tail   (https://flows.nodered.org/node/node-red-node-tail) Installed using Menu/Manage Pallet/Install, then search for 'node-red-node-tail' version 0.1.1 or higher
 
@@ -14,7 +14,13 @@ Requirements:
 
 - Import script using Menu/Inport/Clipboard and paste from clipboard.
 
-- Change the settings by double clicking 'Config' in the flow.
+- Change the settings by double clicking 'Config' in the flow. Callsign and Grid Square have to be ALL upper case.
+
+- Output filename will be "Filtered_Output_(Callsign)_(UTC Month)_(UTC Year).txt'
 
 - Deploy (Done!)
 
+-------------------------------------------------------------------------------------------------------------------------
+* Obviously this script will ONLY run while Node-Red is running. Set Node-Red as system startup to enable always running.
+See https://nodered.org/docs/getting-started/raspberrypi   - Autostart On Boot
+-------------------------------------------------------------------------------------------------------------------------
