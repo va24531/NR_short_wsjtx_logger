@@ -10,7 +10,7 @@ Requirements:
 
 - Node-Red Tail   (https://flows.nodered.org/node/node-red-node-tail) Installed using Menu/Manage Pallet/Install, then search for 'node-red-node-tail' version 0.1.1 or higher
 
-- Copy entire contents of .txt file into clipboard.
+- Copy entire contents of short_logger.txt file into clipboard.
 
 - Import script using Menu/Inport/Clipboard and paste from clipboard.
 
