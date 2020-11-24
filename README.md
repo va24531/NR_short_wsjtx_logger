@@ -22,6 +22,7 @@ Requirements:
 
 -------------------------------------------------------------------------------------------------------------------------
 * Obviously this script will ONLY run while Node-Red is running. Set Node-Red as system startup to enable always running.
+
 See https://nodered.org/docs/getting-started/raspberrypi   - Autostart On Boot
 -------------------------------------------------------------------------------------------------------------------------
 ![Done](https://raw.githubusercontent.com/va24531/NR_short_wsjtx_logger/main/short_logger.jpg?raw=true)
